@@ -1,0 +1,3 @@
+type CardProps = {
+  content: string;
+};
