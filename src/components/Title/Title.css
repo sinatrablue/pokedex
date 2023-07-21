@@ -1,0 +1,13 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    background-color: #F4B185;
+    color: #FCF0DE;
+    -webkit-text-stroke: 1px hsl(24, 81%, 67%);
+    border: 1px hsl(24, 81%, 67%);
+    border-radius: 8px;
+    gap: 2rem;
+}
