@@ -1,0 +1,10 @@
+.error-handler-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #f15f3e;
+  font-weight: bolder;
+}

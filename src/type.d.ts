@@ -1,3 +1,0 @@
-type CardProps = {
-  content: string;
-};
