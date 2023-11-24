@@ -1,6 +1,7 @@
 export type ButtonProps = {
   content: string;
   icon: string;
+  onClick: () => void;
 };
 
 export type CardProps = {
@@ -11,9 +12,11 @@ export type ErrorHandlerProps = {
   err: any;
 };
 
-export type rootUrlReturn = {
-  name: string;
-  url: string;
+export type PokemonGroupProps = {
+  count: number;
+  next: string | null; // url
+  previous: string | null; // url
+  results: { name: string; url: string }[];
 };
 
 export type PokemonProps = {

@@ -9,6 +9,7 @@
   margin-block: 2rem;
   height: 10cqh;
   width: 20cqw;
+  cursor: pointer;
 }
 
 .button-content {
