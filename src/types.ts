@@ -1,3 +1,16 @@
+import { UseQueryResult } from "@tanstack/react-query";
+
+export type PokemonListProps = {
+  data: UseQueryResult<PokemonProps, unknown>[];
+  isListLoading: boolean;
+};
+
+export type PageSwitchersProps = {
+  next: string | null; // url
+  previous: string | null; // url
+  setCurrentPageUrl: (url: string) => void;
+};
+
 export type ButtonProps = {
   content: string;
   icon: string;

@@ -1,4 +1,4 @@
-import { ButtonProps } from "../../types";
+import { ButtonProps } from "../../../types";
 import "./Button.css";
 
 export default function Button({ content, icon, onClick }: ButtonProps) {

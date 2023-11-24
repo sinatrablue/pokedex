@@ -1,4 +1,4 @@
-import { ErrorHandlerProps } from "../../types";
+import { ErrorHandlerProps } from "../../../types";
 import "./ErrorHandler.css";
 
 export default function ErrorHandler(props: ErrorHandlerProps) {

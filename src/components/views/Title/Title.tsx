@@ -1,5 +1,5 @@
 import "./Title.css";
-import Pokeball from "../../assets/pokeball.svg";
+import Pokeball from "../../../assets/pokeball.svg";
 
 export default function Title() {
   return (
