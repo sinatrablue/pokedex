@@ -19,7 +19,12 @@ export default function PageSwitchers({
 
   return (
     <div className="page-switchers">
-      <Button content="Previous" icon={LeftArrow} onClick={setUrlToPrevious} />
+      <Button
+        content="Previous"
+        icon={LeftArrow}
+        onClick={setUrlToPrevious}
+        reverseContent
+      />
       <Button content="Next" icon={RightArrow} onClick={setUrlToNext} />
     </div>
   );

@@ -8,12 +8,12 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    <>
+    <div id="root">
       <Title />
       <QueryClientProvider client={queryClient}>
         <PokemonListController />
       </QueryClientProvider>
-    </>
+    </div>
   );
 }
 

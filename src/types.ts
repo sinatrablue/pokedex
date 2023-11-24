@@ -15,6 +15,7 @@ export type ButtonProps = {
   content: string;
   icon: string;
   onClick: () => void;
+  reverseContent?: boolean;
 };
 
 export type CardProps = {

@@ -8,6 +8,10 @@ import PageSwitchers from "../../views/PageSwitchers/PageSwitchers";
 export default function PokemonListController() {
   const [currentPageUrl, setCurrentPageUrl] = useState<string>("");
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPageUrl]);
+
   const {
     data: pokemonPageInfos,
     isLoading: isListLoading,

@@ -1,8 +1,16 @@
 .list-container {
-  padding: 2rem;
+  overflow: auto;
+  padding-inline: 3rem;
+  padding-block: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  border: 3px solid hsl(24, 81%, 67%);
+  border-radius: 1rem;
 }
+
+/* TODO : list content isn't displayed entirely, starts at n°8 ???
+the rest is above the div/screen */

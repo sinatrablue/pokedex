@@ -7,9 +7,13 @@
   border-radius: 15px;
   padding-inline: 2rem;
   margin-block: 2rem;
-  height: 10cqh;
-  width: 20cqw;
+  min-height: 4rem;
+  min-width: 10rem;
   cursor: pointer;
+}
+
+.inverted {
+  flex-direction: row-reverse;
 }
 
 .button-content {
