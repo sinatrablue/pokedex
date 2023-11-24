@@ -1,0 +1,21 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4b185;
+  box-shadow: 4px 3px 4px #f4b185, 4px 5px 5px #ffe26f;
+  border-radius: 15px;
+  padding-inline: 2rem;
+  margin-block: 2rem;
+  height: 10cqh;
+  width: 20cqw;
+}
+
+.button-content {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button-icon {
+  height: 2.5rem;
+}

@@ -1,3 +1,8 @@
+export type ButtonProps = {
+  content: string;
+  icon: string;
+};
+
 export type CardProps = {
   content: string;
 };

@@ -1,6 +1,6 @@
 import "./Card.css";
 import Pokeball from "../../assets/pokeball.svg";
-import { PokemonBasicProps, rootUrlReturn } from "../../types";
+import { rootUrlReturn } from "../../types";
 import { useQuery } from "@tanstack/react-query";
 import { getPokemonByURL } from "../../api/pokemonRoutes";
 import ErrorHandler from "../ErrorHandler/ErrorHandler";

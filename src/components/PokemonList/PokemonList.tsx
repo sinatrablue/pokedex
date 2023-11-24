@@ -6,6 +6,9 @@ import "./PokemonList.css";
 import { useQuery } from "@tanstack/react-query";
 import { getPokemons } from "../../api/pokemonRoutes";
 import { rootUrlReturn } from "../../types";
+import Button from "../Button/Button";
+import LeftArrow from "../../assets/left-direction.svg";
+import RightArrow from "../../assets/right-direction.svg";
 
 export default function PokemonList() {
   const {
@@ -27,10 +30,16 @@ export default function PokemonList() {
   if (isListError) return <ErrorHandler err={listError} />;
 
   return (
-    <div className="list-container">
-      {pokemons.results.map((pkm: rootUrlReturn) => (
-        <Card key={pkm.name} {...pkm} />
-      ))}
-    </div>
+    <>
+      <div className="list-container">
+        {pokemons.results.map((pkm: rootUrlReturn) => (
+          <Card key={pkm.name} {...pkm} />
+        ))}
+      </div>
+      <div className="page-switchers">
+        <Button content="Previous" icon={LeftArrow} />
+        <Button content="Next" icon={RightArrow} />
+      </div>
+    </>
   );
 }
