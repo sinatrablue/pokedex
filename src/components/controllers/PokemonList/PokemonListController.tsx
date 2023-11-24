@@ -2,18 +2,11 @@ import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getPokemonByURL, getPokemons } from "../../../api/pokemonRoutes";
 import PokemonList from "../../views/PokemonList/PokemonList";
 import ErrorHandler from "../../views/ErrorHandler/ErrorHandler";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import PageSwitchers from "../../views/PageSwitchers/PageSwitchers";
 
 export default function PokemonListController() {
-  const queryContext = useQueryClient();
-
   const [currentPageUrl, setCurrentPageUrl] = useState<string>("");
-
-  useEffect(() => {
-    console.log("page url", currentPageUrl);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPageUrl]);
 
   const {
     data: pokemonPageInfos,
@@ -24,10 +17,6 @@ export default function PokemonListController() {
     queryKey: ["pkm", currentPageUrl],
     queryFn: ({ queryKey }) => getPokemons(queryKey[1]),
   });
-
-  useEffect(() => {
-    console.log("page infos", pokemonPageInfos);
-  }, [pokemonPageInfos]);
 
   if (isListError) return <ErrorHandler err={listError} />;
 
@@ -42,9 +31,10 @@ export default function PokemonListController() {
       : [],
   });
 
-  useEffect(() => {
-    console.log("pokemons", pokemons);
-  }, [pokemons]);
+  const setCurrentPageUrlFn = useCallback(
+    (url: string) => setCurrentPageUrl(url),
+    []
+  );
 
   return (
     <>
@@ -54,7 +44,7 @@ export default function PokemonListController() {
         <PageSwitchers
           previous={pokemonPageInfos.previous}
           next={pokemonPageInfos.next}
-          setCurrentPageUrl={url => setCurrentPageUrl(url)}
+          setCurrentPageUrl={setCurrentPageUrlFn}
         />
       )}
     </>
