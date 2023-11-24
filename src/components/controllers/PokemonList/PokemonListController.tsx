@@ -12,7 +12,6 @@ export default function PokemonListController() {
 
   useEffect(() => {
     console.log("page url", currentPageUrl);
-    queryContext.invalidateQueries({ queryKey: ["pkm"] });
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPageUrl]);
 
